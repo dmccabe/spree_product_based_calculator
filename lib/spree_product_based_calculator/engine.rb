@@ -20,7 +20,7 @@ module SpreeProductBasedCalculator
     config.to_prepare &method(:activate).to_proc
     
     initializer 'spree.register.product_based_calculator', :after => 'spree.register.calculators' do |app|
-      app.config.spree.calculators.shipping_methods << Spree::Calculator::ProductBased
+      app.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::ProductBased
     end
   end
 end
