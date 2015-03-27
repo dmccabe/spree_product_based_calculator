@@ -1,6 +1,8 @@
+require_dependency 'spree/shipping_calculator'
+
 module Spree
   module Calculator::Shipping
-    class ProductBased < Calculator
+    class ProductBased < ShippingCalculator
       preference :default_value, :decimal, :default => 0
 
       def self.description
