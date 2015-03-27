@@ -6,7 +6,7 @@ module Spree
       preference :default_value, :decimal, :default => 0
 
       def self.description
-        I18n.t(:product_based)
+        Spree.t(:product_based)
       end
 
       def compute(object=nil)
